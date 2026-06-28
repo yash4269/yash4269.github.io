@@ -32,7 +32,12 @@ export type IconName =
   | "docker"
   | "golang"
   | "kubernetes"
-  | "java";
+  | "java"
+  | "zscaler"
+  | "aws"
+  | "salesforce"
+  | "servicenow"
+  | "zerotrust";
 
 const iconMap: Record<IconName, React.ComponentType<{ className?: string }>> = {
   github: Icons.github,
@@ -55,6 +60,11 @@ const iconMap: Record<IconName, React.ComponentType<{ className?: string }>> = {
   golang: Golang,
   kubernetes: Kubernetes,
   java: Java,
+  zscaler: Icons.zscaler,
+  aws: Icons.aws,
+  salesforce: Icons.salesforce,
+  servicenow: Icons.servicenow,
+  zerotrust: Icons.zerotrust,
 };
 
 export function getIcon(name: string, className?: string): React.ReactNode {

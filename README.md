@@ -1,10 +1,10 @@
-# Portfolio
+# Portfolio – Yash Gupta
 
 Personal portfolio website built with Next.js, shadcn/ui, and Magic UI.
 
 ## About
 
-Hi, I'm **Saurabh Gupta** — Co-Founder @Heisenbug building agentic compliance solutions. I'm obsessed with systems that work in the real world. At IIT Bombay I have worked on UAVs, cryptography, robots, and now a startup.
+Hi, I'm **Yash Gupta** — Cybersecurity Product Manager at ICICI Bank, working on Zscaler and Zero Trust infrastructure at enterprise scale. I led the migration of 282 applications and 6,000 servers from legacy Bluecoat proxy to Zscaler, securing connectivity for 140,000+ employees.
 
 ## Features
 
@@ -12,7 +12,6 @@ Hi, I'm **Saurabh Gupta** — Co-Founder @Heisenbug building agentic compliance 
 - **Single data file** — All personal content in `src/data/resume.ts`
 - **TypeScript** — Fully typed data structure
 - **Responsive** — Optimized for desktop and mobile
-- **Blog support** — MDX-based blog with content collections
 - **OG images** — Auto-generated Open Graph images at build time
 - **Dark mode** — System-aware theme switching
 
@@ -20,8 +19,8 @@ Hi, I'm **Saurabh Gupta** — Co-Founder @Heisenbug building agentic compliance 
 
 ```bash
 # Clone the repository
-git clone https://github.com/saurabh4269/saurabh4269.github.io
-cd saurabh4269.github.io
+git clone https://github.com/yash4269/yash4269.github.io
+cd yash4269.github.io
 
 # Install dependencies
 pnpm install
@@ -72,7 +71,7 @@ cp .env.example .env
 ### 3. Add Your Assets
 
 Place your images in the `public/` folder:
-- `public/me.png` — Profile photo
+- `public/me.jpg` — Profile photo
 - `public/*.svg` or `public/*.png` — Company/organization logos
 
 ## Deployment
@@ -104,28 +103,12 @@ jobs:
       - run: pnpm install
       - run: pnpm build
         env:
-          NEXT_PUBLIC_SITE_URL: https://saurabh4269.github.io
-          NEXT_PUBLIC_BASE_PATH: /portfolio
+          NEXT_PUBLIC_SITE_URL: https://yash4269.github.io
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
 ```
-
-### Vercel
-
-1. Import your repository to Vercel
-2. Add environment variables:
-   - `NEXT_PUBLIC_SITE_URL` = your deployment URL
-   - `NEXT_PUBLIC_BASE_PATH` = (leave empty for production)
-
-### Netlify
-
-1. Connect your repository to Netlify
-2. Build settings:
-   - **Build command**: `pnpm build`
-   - **Publish directory**: `out`
-3. Add environment variables in site settings
 
 ## Project Structure
 
@@ -133,7 +116,6 @@ jobs:
 src/
 ├── app/                    # Next.js app directory
 │   ├── page.tsx           # Home page
-│   ├── blog/[slug]/       # Blog posts
 │   └── layout.tsx         # Root layout with fonts/SEO
 ├── components/
 │   ├── navbar.tsx         # Bottom navigation dock
@@ -141,8 +123,7 @@ src/
 │   └── section/           # Page sections
 │       ├── work-section.tsx
 │       ├── projects-section.tsx
-│       ├── contact-section.tsx
-│       └── ...
+│       └── contact-section.tsx
 ├── data/
 │   └── resume.ts          # All personal content
 └── lib/
@@ -157,7 +138,6 @@ src/
 - **TypeScript** for type safety
 - **Tailwind CSS** + **shadcn/ui** for styling
 - **Magic UI** for animations
-- **content-collections** for MDX blog
 - **satori** + **sharp** for OG image generation
 
 ## Scripts

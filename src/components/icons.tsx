@@ -226,4 +226,44 @@ export const Icons = {
       />
     </svg>
   ),
+  zscaler: (props: IconProps) => (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Zscaler</title>
+      <rect width="100" height="100" rx="18" fill="#005BAA"/>
+      <text x="50" y="64" fontFamily="Arial, sans-serif" fontSize="38" fontWeight="bold" fill="white" textAnchor="middle">ZS</text>
+    </svg>
+  ),
+  aws: (props: IconProps) => (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>AWS</title>
+      <rect width="100" height="100" rx="18" fill="#232F3E"/>
+      <text x="50" y="52" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="bold" fill="#FF9900" textAnchor="middle">AWS</text>
+      <path d="M22 62 Q50 72 78 62" stroke="#FF9900" strokeWidth="3" fill="none" strokeLinecap="round"/>
+      <polygon points="74,60 78,62 75,65" fill="#FF9900"/>
+    </svg>
+  ),
+  salesforce: (props: IconProps) => (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>Salesforce</title>
+      <rect width="100" height="100" rx="18" fill="#00A1E0"/>
+      <text x="50" y="44" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="white" textAnchor="middle">SALES</text>
+      <text x="50" y="64" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="white" textAnchor="middle">FORCE</text>
+    </svg>
+  ),
+  servicenow: (props: IconProps) => (
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <title>ServiceNow</title>
+      <rect width="100" height="100" rx="18" fill="#62D84E"/>
+      <text x="50" y="44" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="bold" fill="#1B3D1F" textAnchor="middle">SERVICE</text>
+      <text x="50" y="63" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="bold" fill="#1B3D1F" textAnchor="middle">NOW</text>
+    </svg>
+  ),
+  zerotrust: (props: IconProps) => (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <title>Zero Trust</title>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <polyline points="9 12 11 14 15 10"/>
+    </svg>
+  ),
 };
+

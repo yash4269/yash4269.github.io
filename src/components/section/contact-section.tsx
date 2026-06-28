@@ -6,22 +6,10 @@ import { getIcon } from "@/lib/icons-map";
 export default function ContactSection() {
   const socialLinks = [
     {
-      name: "GitHub",
-      url: resume.contact.social.github?.url || "",
-      iconName: "github",
-      ariaLabel: "Visit my GitHub profile",
-    },
-    {
       name: "LinkedIn",
       url: resume.contact.social.linkedin?.url || "",
       iconName: "linkedin",
       ariaLabel: "Visit my LinkedIn profile",
-    },
-    {
-      name: "X",
-      url: resume.contact.social.x?.url || "",
-      iconName: "x",
-      ariaLabel: "Visit my X profile",
     },
     {
       name: "Email",
@@ -29,7 +17,7 @@ export default function ContactSection() {
       iconName: "email",
       ariaLabel: "Send me an email",
     },
-  ];
+  ].filter((link) => link.url);
 
   return (
     <div className="border rounded-xl p-10 relative">
@@ -51,6 +39,9 @@ export default function ContactSection() {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
           Get in Touch
         </h2>
+        <p className="text-muted-foreground text-sm max-w-sm">
+          Open to Product Management opportunities in cybersecurity, BFSI, and enterprise tech. Feel free to reach out!
+        </p>
         <div className="flex gap-4">
           {socialLinks.map((link) => (
             <Link
@@ -69,4 +60,3 @@ export default function ContactSection() {
     </div>
   );
 }
-

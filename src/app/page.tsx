@@ -6,15 +6,16 @@ import { resume } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
-import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import VolunteeringSection from "@/components/section/volunteering-section";
+import CertificationsSection from "@/components/section/certifications-section";
 import { ArrowUpRight } from "lucide-react";
 import { withBasePath } from "@/lib/basePath";
 import { getIcon } from "@/lib/icons-map";
 
 const BLUR_FADE_DELAY = 0.04;
+
+
 
 export default function Page() {
   return (
@@ -138,21 +139,16 @@ export default function Page() {
           <ProjectsSection />
         </BlurFade>
       </section>
-      <section id="hackathons">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <HackathonsSection />
-        </BlurFade>
-      </section>
-      <section id="volunteering">
+      <section id="certifications">
         <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Volunteering</h2>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <h2 className="text-xl font-bold">Certifications</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <VolunteeringSection />
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <CertificationsSection />
           </BlurFade>
         </div>
-      </section>     
+      </section>
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <ContactSection />

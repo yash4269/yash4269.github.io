@@ -20,6 +20,9 @@ function getSortedPosts() {
 }
 
 export async function generateStaticParams() {
+  if (allPosts.length === 0) {
+    return [{ slug: "placeholder" }];
+  }
   return allPosts.map((post) => ({
     slug: post._meta.path.replace(/\.mdx$/, ""),
   }));

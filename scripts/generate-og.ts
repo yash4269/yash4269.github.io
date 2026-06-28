@@ -3,16 +3,11 @@ import sharp from "sharp";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { jsx } from "react/jsx-runtime";
-
-const DATA = {
-  name: "Saurabh Gupta",
-  description:
-    "Co-Founder @Heisenbug | Building agentic compliance solutions | Obsessed with systems that work in the real world",
-};
+import { resume } from "../src/data/resume";
 
 async function generateOGImage() {
   const fontPath = join(process.cwd(), "public/fonts/CabinetGrotesk-Medium.ttf");
-  const avatarPath = join(process.cwd(), "public/me.png");
+  const avatarPath = join(process.cwd(), "public", resume.personal.avatar.replace(/^\//, ""));
   const outputPath = join(process.cwd(), "public/og.png");
 
   const fontBuffer = readFileSync(fontPath);
@@ -25,7 +20,7 @@ async function generateOGImage() {
   try {
     avatarBuffer = readFileSync(avatarPath);
   } catch {
-    console.log("Avatar not found");
+    console.log("Avatar not found at", avatarPath);
   }
 
   const svg = await satori(
@@ -61,7 +56,7 @@ async function generateOGImage() {
                     color: "#000000",
                     letterSpacing: "-0.03em",
                   },
-                  children: DATA.name,
+                  children: resume.personal.name,
                 },
                 "name"
               ),
@@ -77,7 +72,7 @@ async function generateOGImage() {
                     marginTop: "24px",
                     maxWidth: "600px",
                   },
-                  children: DATA.description,
+                  children: resume.personal.description,
                 },
                 "description"
               ),
@@ -89,7 +84,7 @@ async function generateOGImage() {
           ? jsx(
               "img",
               {
-                src: `data:image/png;base64,${avatarBuffer.toString("base64")}`,
+                src: `data:image/jpeg;base64,${avatarBuffer.toString("base64")}`,
                 style: {
                   width: "240px",
                   height: "240px",
